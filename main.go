@@ -18,6 +18,8 @@ func main() {
 	r.HandleFunc("/register", autcontroller.Register).Methods("POST")
 	r.HandleFunc("/logout", autcontroller.Logout).Methods("GET")
 
-	log.Fatal(http.ListenAndServe(":8000", r))
+	r.HandleFunc("/api/product", productcontroller.index).Methods("GET")
+
+	log.Fatal(http.ListenAndServe(":8080", r))
 
 }

@@ -1,6 +1,8 @@
 package models
 
 import (
+	"fmt"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -8,14 +10,12 @@ import (
 var DB *gorm.DB
 
 func ConnectDatabase() {
-	db, err := gorm.Open(mysql.Open("root:@tcp(localhost:3306/go-jwt-mux"))
-
+	db, err := gorm.Open(mysql.Open("root:@tcp(localhost:3306)/go_jwt_mux"))
 	if err != nil {
-		panic(err)
+		fmt.Println("Gagal koneksi database")
 	}
 
 	db.AutoMigrate(&User{})
 
 	DB = db
-
 }
