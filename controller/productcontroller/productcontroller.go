@@ -6,7 +6,7 @@ import (
 	"github.com/oriegenbi27/go-jwt-mux/helper"
 )
 
-func index(w http.ResponseWriter, r *http.Request) {
+func Index(w http.ResponseWriter, r *http.Request) {
 	data := []map[string]interface{}{
 		{
 			"id":           1,

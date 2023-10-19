@@ -49,7 +49,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// proses pembuatan token jwt
-	expTime := time.Now().Add(time.Minute * 1)
+	expTime := time.Now().Add(time.Minute * 60)
 	claims := &config.JWTClaim{
 		Username: user.Username,
 		RegisteredClaims: jwt.RegisteredClaims{
