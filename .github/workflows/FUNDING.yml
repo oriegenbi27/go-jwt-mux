@@ -2,7 +2,7 @@ name: Auto Commit
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Atur jadwal sesuai kebutuhan Anda
+    - cron: "* * * * *" # Atur jadwal sesuai kebutuhan Anda
 
 jobs:
   build:
