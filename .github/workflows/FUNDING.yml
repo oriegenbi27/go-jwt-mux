@@ -1,6 +1,9 @@
 name: Auto Commit
 
 on:
+ push:
+    branches:
+      - master
   schedule:
     - cron: "* * * * *" # Atur jadwal sesuai kebutuhan Anda
 
